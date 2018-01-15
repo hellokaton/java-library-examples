@@ -19,7 +19,7 @@ import java.io.IOException;
  * @author biezhi
  * @date 2018/1/15
  */
-public class HttpClientExample6 {
+public class CookieExample {
 
     public static void main(String[] args) throws IOException {
         CloseableHttpClient httpclient = HttpClients.createDefault();

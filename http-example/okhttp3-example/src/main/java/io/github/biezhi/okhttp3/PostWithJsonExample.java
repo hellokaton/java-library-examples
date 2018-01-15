@@ -10,7 +10,7 @@ import java.io.IOException;
  * @author biezhi
  * @date 2018/1/15
  */
-public class OkHttp3Example3 {
+public class PostWithJsonExample {
 
     public static final MediaType JSON = MediaType.parse("application/json; charset=utf-8");
 
@@ -40,9 +40,9 @@ public class OkHttp3Example3 {
     }
 
     public static void main(String[] args) throws IOException {
-        OkHttp3Example3 example  = new OkHttp3Example3();
-        String          json     = example.bowlingJson("biezhi", "Jake");
-        String          response = example.post("http://www.roundsapp.com/post", json);
+        PostWithJsonExample example  = new PostWithJsonExample();
+        String              json     = example.bowlingJson("biezhi", "Jake");
+        String              response = example.post("http://www.roundsapp.com/post", json);
         System.out.println(response);
     }
 

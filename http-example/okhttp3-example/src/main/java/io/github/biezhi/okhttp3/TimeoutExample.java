@@ -5,39 +5,29 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 /**
- * Get请求示例
+ * 设置超时
  *
  * @author biezhi
  * @date 2018/1/15
  */
-public class OkHttp3Example1 {
-
-    OkHttpClient client = new OkHttpClient();
-
-    private String run(String url) throws IOException {
-        Request request = new Request.Builder()
-                .url(url)
-                .build();
-
-        try (Response response = client.newCall(request).execute()) {
-            return response.body().string();
-        }
-    }
+public class TimeoutExample {
 
     public static void main(String[] args) throws IOException {
 
-        OkHttpClient client = new OkHttpClient();
+        OkHttpClient client = new OkHttpClient.Builder()
+                .readTimeout(1, TimeUnit.SECONDS)
+                .build();
 
         Request request = new Request.Builder()
-                .url("https://biezhi.me")
+                .url("http://example.org/delay/2")
                 .build();
 
         try (Response response = client.newCall(request).execute()) {
             System.out.println(response.body().string());
         }
-
     }
 
 }

@@ -15,7 +15,7 @@ import java.util.concurrent.TimeUnit;
  * @author biezhi
  * @date 2018/1/15
  */
-public class OkHttp3Example9 {
+public class CacheResponseExample {
 
     public static void main(String[] args) throws IOException {
 

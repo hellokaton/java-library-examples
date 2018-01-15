@@ -14,7 +14,7 @@ import java.io.IOException;
  * @author biezhi
  * @date 2018/1/15
  */
-public class HttpClientExample4 {
+public class TimeoutExample {
 
     public static void main(String[] args) throws IOException {
         CloseableHttpClient httpclient = HttpClients.createDefault();

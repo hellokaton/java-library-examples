@@ -13,7 +13,7 @@ import java.io.IOException;
  * @author biezhi
  * @date 2018/1/15
  */
-public class OkHttp3Example6 {
+public class DefaultHeaderExample {
 
     static class DefaultContentTypeInterceptor implements Interceptor {
         private String contentType;

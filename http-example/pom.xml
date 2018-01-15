@@ -15,6 +15,7 @@
         <module>okhttp3-example</module>
         <module>httpclient4-example</module>
         <module>ohmyrequest-example</module>
+        <module>unirest-example</module>
     </modules>
 
 

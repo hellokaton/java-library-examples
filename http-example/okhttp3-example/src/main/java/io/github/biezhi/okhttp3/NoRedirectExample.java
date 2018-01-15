@@ -5,24 +5,23 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 import java.io.IOException;
-import java.util.concurrent.TimeUnit;
 
 /**
- * 设置超时
+ * 禁止重定向
  *
  * @author biezhi
  * @date 2018/1/15
  */
-public class OkHttp3Example8 {
+public class NoRedirectExample {
 
     public static void main(String[] args) throws IOException {
 
-        OkHttpClient client = new OkHttpClient.Builder()
-                .readTimeout(1, TimeUnit.SECONDS)
+        OkHttpClient client = new OkHttpClient().newBuilder()
+                .followRedirects(false)
                 .build();
 
         Request request = new Request.Builder()
-                .url("http://example.org/delay/2")
+                .url("http://t.co/I5YYd9tddw")
                 .build();
 
         try (Response response = client.newCall(request).execute()) {

@@ -17,7 +17,7 @@ import java.io.InputStreamReader;
  * @author biezhi
  * @date 2018/1/15
  */
-public class HttpClientExample1 {
+public class GetExample {
 
     public static void main(String[] args) throws IOException {
         CloseableHttpClient httpclient = HttpClients.createDefault();

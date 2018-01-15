@@ -11,7 +11,7 @@ import java.io.IOException;
  * @author biezhi
  * @date 2018/1/15
  */
-public class OkHttp3Example5 {
+public class MultipartExample {
 
     public static void main(String[] args) throws IOException {
         OkHttpClient client = new OkHttpClient();
