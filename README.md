@@ -2,8 +2,8 @@
 
 Java 库、框架使用示例大全。
 
-![](https://img.shields.io/travis/biezhi/java-library-examples.svg)
-![](https://img.shields.io/badge/license-MIT-FF0080.svg)
+[![](https://img.shields.io/travis/biezhi/java-library-examples.svg)](https://travis-ci.org/biezhi/java-library-examples)
+[![](https://img.shields.io/badge/license-MIT-FF0080.svg)](https://github.com/biezhi/java-library-examples/blob/master/LICENSE)
 
 - [cache-example](https://github.com/biezhi/java-library-examples/tree/master/cache-example): 缓存示例，包含 jedis、ehcache
     - [ehcache-example](https://github.com/biezhi/java-library-examples/blob/master/cache-example/ehcache-example)
@@ -65,4 +65,4 @@ Java 库、框架使用示例大全。
 
 # 开源协议
 
-[MIT](LICENSE)
+[MIT](https://github.com/biezhi/java-library-examples/blob/master/LICENSE)
