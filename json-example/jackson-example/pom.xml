@@ -11,5 +11,12 @@
 
     <artifactId>jackson-example</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.8.9</version>
+        </dependency>
+    </dependencies>
 
 </project>

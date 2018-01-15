@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.util.List;
 
 /**
- * Gson 文件示例
+ * Gson 文件读写示例
  *
  * @author biezhi
  * @date 2018/1/15
