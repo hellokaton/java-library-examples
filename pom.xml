@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>io.github.biezhi</groupId>
+    <artifactId>java-library-examples</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>json-example</module>
+        <module>http-example</module>
+        <module>log-example</module>
+        <module>cache-example</module>
+        <module>orm-examples</module>
+        <module>crawler-example</module>
+        <module>email-example</module>
+        <module>qrcode-example</module>
+        <module>rss-example</module>
+        <module>gui-example</module>
+        <module>network-example</module>
+        <module>yaml-example</module>
+        <module>encrypt-example</module>
+        <module>excel-example</module>
+        <module>template-example</module>
+        <module>mq-example</module>
+        <module>task-example</module>
+    </modules>
+
+
+</project>
