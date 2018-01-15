@@ -11,5 +11,11 @@
 
     <artifactId>yaml-example</artifactId>
 
-
+    <dependencies>
+        <dependency>
+            <groupId>org.yaml</groupId>
+            <artifactId>snakeyaml</artifactId>
+            <version>1.19</version>
+        </dependency>
+    </dependencies>
 </project>

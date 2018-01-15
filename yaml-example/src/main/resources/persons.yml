@@ -1,0 +1,8 @@
+persons:
+ - name: Joe
+   phone: 111-111-1111
+   address: Park Dr, Charlie Hill
+
+ - name: Trish
+   phone: 111-111-11111
+   address: Small Vine, River Town
