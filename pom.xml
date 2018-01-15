@@ -13,7 +13,7 @@
         <module>http-example</module>
         <module>log-example</module>
         <module>cache-example</module>
-        <module>orm-examples</module>
+        <module>orm-example</module>
         <module>crawler-example</module>
         <module>email-example</module>
         <module>qrcode-example</module>
@@ -27,6 +27,7 @@
         <module>mq-example</module>
         <module>task-example</module>
         <module>common-beans</module>
+        <module>embedded-example</module>
     </modules>
 
     <dependencies>

@@ -9,12 +9,15 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>template-example</artifactId>
+    <artifactId>orm-example</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>freemarker-example</module>
-        <module>velocity-example</module>
-        <module>jetbrick-example</module>
+        <module>mybatis-example</module>
+        <module>hibernate-example</module>
+        <module>sql2o-example</module>
+        <module>dbutils-example</module>
+        <module>blade-jdbc-example</module>
+        <module>jooq-example</module>
     </modules>
 
 

@@ -10,6 +10,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>http-example</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>okhttp3-example</module>
+        <module>httpclient4-example</module>
+        <module>ohmyrequest-example</module>
+    </modules>
 
 
 </project>

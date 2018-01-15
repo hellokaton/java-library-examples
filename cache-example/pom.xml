@@ -10,6 +10,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>cache-example</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>jedis-example</module>
+        <module>ehcache-example</module>
+        <module>guava-cache-example</module>
+    </modules>
 
 
 </project>

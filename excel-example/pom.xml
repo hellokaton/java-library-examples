@@ -10,6 +10,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>excel-example</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>poi-excel-example</module>
+        <module>jxl-excel-example</module>
+    </modules>
 
 
 </project>

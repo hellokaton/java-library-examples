@@ -8,6 +8,7 @@ Java 库、框架使用示例大全。
 - cache-example: 缓存示例，包含 jedis、ehcache
 - crawler-example: 爬虫示例，包含 webmagic、elves
 - email-example: 发送邮件示例
+- embedded-example: 嵌入式库示例，包含 jetty、数据库等
 - encrypt-example: 加解密字符串示例
 - excel-example: Excel文件处理示例，包含 POI 和 JXL
 - gui-example: swing界面示例

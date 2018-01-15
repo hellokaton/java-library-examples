@@ -9,12 +9,11 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>template-example</artifactId>
+    <artifactId>embedded-example</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>freemarker-example</module>
-        <module>velocity-example</module>
-        <module>jetbrick-example</module>
+        <module>embedded-jetty-example</module>
+        <module>mapdb-example</module>
     </modules>
 
 

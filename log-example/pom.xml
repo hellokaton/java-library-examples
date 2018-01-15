@@ -10,6 +10,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>log-example</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>log4j-example</module>
+        <module>logback-example</module>
+    </modules>
 
 
 </project>

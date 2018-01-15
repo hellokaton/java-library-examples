@@ -10,6 +10,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>crawler-example</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>webmagic-example</module>
+        <module>crawler4j-example</module>
+        <module>elves-example</module>
+    </modules>
 
 
 </project>
