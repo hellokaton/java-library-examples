@@ -28,6 +28,11 @@ public class GsonExample1 {
         PrintUtils.print("Person 对象序列化为 JSON 字符串", gson.toJson(person));
 
         /**
+         * 美观格式化
+         */
+        PrintUtils.print("美观格式化", "\r\n" + new GsonBuilder().setPrettyPrinting().create().toJson(person));
+
+        /**
          * List对象
          */
         List<Person> persons = BeanData.randPersons(5);
@@ -38,6 +43,7 @@ public class GsonExample1 {
          */
         Gson gson = new GsonBuilder().setDateFormat("yyyy年MM月dd日").create();
         PrintUtils.print("日期格式化", gson.toJson(person));
+
     }
 
     public static void fromJson() {
