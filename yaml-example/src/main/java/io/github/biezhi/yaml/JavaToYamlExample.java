@@ -5,6 +5,9 @@ import org.yaml.snakeyaml.Yaml;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Map 转 yaml配置
+ */
 public class JavaToYamlExample {
 
   public static void main(String[] args) {

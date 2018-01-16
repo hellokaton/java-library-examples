@@ -6,6 +6,9 @@ import org.yaml.snakeyaml.Yaml;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * map转yaml，根据配置
+ */
 public class JavaToYamlWithOptions {
 
     public static void main(String[] args) {
