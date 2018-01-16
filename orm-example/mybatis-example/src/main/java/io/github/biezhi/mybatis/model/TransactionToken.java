@@ -1,4 +1,4 @@
-package io.github.biezhi.mybatis;
+package io.github.biezhi.mybatis.model;
 
 import lombok.Data;
 

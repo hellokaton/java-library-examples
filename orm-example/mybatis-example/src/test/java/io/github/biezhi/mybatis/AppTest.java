@@ -1,27 +1,24 @@
 package io.github.biezhi.mybatis;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
-
-import io.github.biezhi.mybatis.App;
-import io.github.biezhi.mybatis.TransactionToken;
-import io.github.biezhi.mybatis.TransactionTokenMapper;
+import io.github.biezhi.mybatis.mapper.TransactionTokenMapper;
+import io.github.biezhi.mybatis.model.TransactionToken;
+import io.github.biezhi.mybatis.utils.MyBatisUtil;
 import org.apache.ibatis.session.SqlSession;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+import static org.junit.Assert.*;
+
 public class AppTest {
 
     @BeforeClass
     static public void testApp() {
-        App.init();
 
-        assertNotNull(App.factory);
+        assertNotNull(MyBatisUtil.getSqlSessionFactory());
 
-        SqlSession s = App.factory.openSession();
+        SqlSession s = MyBatisUtil.getSqlSessionFactory().openSession();
 
         TransactionTokenMapper mapper = s.getMapper(TransactionTokenMapper.class);
         mapper.schema();
@@ -35,7 +32,7 @@ public class AppTest {
 
     @Before
     public void setupSession() {
-        session = App.factory.openSession();  // This obtains a database connection!
+        session = MyBatisUtil.getSqlSessionFactory().openSession();  // This obtains a database connection!
         mapper = session.getMapper(TransactionTokenMapper.class);
     }
 
@@ -45,8 +42,7 @@ public class AppTest {
         session.close();   // This releases the connection
     }
 
-    private TransactionToken tokenFactory(String tokenPrefix, String transactionPrefix)
-    {
+    private TransactionToken tokenFactory(String tokenPrefix, String transactionPrefix) {
         TransactionToken t = new TransactionToken();
         t.setToken(tokenPrefix + System.currentTimeMillis());
         t.setTransaction(transactionPrefix + System.currentTimeMillis());

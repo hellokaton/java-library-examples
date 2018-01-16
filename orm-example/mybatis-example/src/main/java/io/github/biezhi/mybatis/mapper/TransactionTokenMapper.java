@@ -1,5 +1,6 @@
-package io.github.biezhi.mybatis;
+package io.github.biezhi.mybatis.mapper;
 
+import io.github.biezhi.mybatis.model.TransactionToken;
 import org.apache.ibatis.annotations.*;
 import org.apache.ibatis.type.JdbcType;
 
