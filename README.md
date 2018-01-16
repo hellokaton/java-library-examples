@@ -51,6 +51,8 @@ Java 库、框架使用示例大全，持续更新，请勿 `fork`。
     - [`mybatis-example`](https://github.com/biezhi/java-library-examples/blob/master/orm-example/mybatis-example)
     - [`sql2o-example`](https://github.com/biezhi/java-library-examples/blob/master/orm-example/sql2o-example)
 - [`qrcode-example`](https://github.com/biezhi/java-library-examples/blob/master/qrcode-example)
+    - [`qrgen-example`](https://github.com/biezhi/java-library-examples/blob/master/qrcode-example/qrgen-example)
+    - [`zxing-example`](https://github.com/biezhi/java-library-examples/blob/master/qrcode-example/zxing-example)
 - [`rss-example`](https://github.com/biezhi/java-library-examples/blob/master/rss-example)
 - [`task-example`](https://github.com/biezhi/java-library-examples/blob/master/task-example)
 - [`template-example`](https://github.com/biezhi/java-library-examples/blob/master/template-example)
