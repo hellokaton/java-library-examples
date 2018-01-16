@@ -4,8 +4,8 @@ Java 库、框架使用示例大全，持续更新，请勿 `fork`。
 
 [![](https://img.shields.io/travis/biezhi/java-library-examples.svg)](https://travis-ci.org/biezhi/java-library-examples)
 [![@biezhi on zhihu](https://img.shields.io/badge/zhihu-%40biezhi-red.svg)](https://www.zhihu.com/people/biezhi)
-[![](https://img.shields.io/github/followers/biezhi.svg?style=social&label=Follow%20Me&maxAge=2592000)](https://github.com/biezhi)
 [![](https://img.shields.io/badge/license-MIT-FF0080.svg)](https://github.com/biezhi/java-library-examples/blob/master/LICENSE)
+[![](https://img.shields.io/github/followers/biezhi.svg?style=social&label=Follow%20Me&maxAge=2592000)](https://github.com/biezhi)
 
 - [`cache-example`](https://github.com/biezhi/java-library-examples/tree/master/cache-example)
     - [`ehcache-example`](https://github.com/biezhi/java-library-examples/blob/master/cache-example/ehcache-example)
