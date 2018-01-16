@@ -28,6 +28,7 @@
         <module>task-example</module>
         <module>common-beans</module>
         <module>embedded-example</module>
+        <module>compress-example</module>
     </modules>
 
     <dependencies>

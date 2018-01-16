@@ -11,6 +11,7 @@ Java 库、框架使用示例大全，持续更新，请勿 `fork`。
     - [`ehcache-example`](https://github.com/biezhi/java-library-examples/blob/master/cache-example/ehcache-example)
     - [`guava-cache-example`](https://github.com/biezhi/java-library-examples/blob/master/cache-example/guava-cache-example)
     - [`jedis-example`](https://github.com/biezhi/java-library-examples/blob/master/cache-example/jedis-example)
+- [`compress-example`](https://github.com/biezhi/java-library-examples/tree/master/compress-example)
 - [`crawler-example`](https://github.com/biezhi/java-library-examples/blob/master/crawler-example)
     - [`crawler4j-example`](https://github.com/biezhi/java-library-examples/blob/master/crawler-example/crawler4j-example)
     - [`elves-example`](https://github.com/biezhi/java-library-examples/blob/master/crawler-example/elves-example)

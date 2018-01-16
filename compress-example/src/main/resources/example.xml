@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- course comment -->
+<courses>
+    <course id="0j1dmd247">
+        <!-- course comment -->
+        <name>Reading XML Document using JDom</name>
+        <price>0.0</price>
+    </course>
+    <course id="jds223j23">
+        <name>Getting Started with JDom</name>
+        <price>0.0</price>
+    </course>
+    <course>
+        <name>
+            <![CDATA[
+               characters & ? $ ^ with markup
+            ]]>
+        </name>
+        <price>12.0</price>
+    </course>
+</courses>
