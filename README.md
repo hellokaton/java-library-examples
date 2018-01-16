@@ -3,8 +3,8 @@
 Java 库、框架使用示例大全，持续更新，请勿 `fork`。
 
 [![](https://img.shields.io/travis/biezhi/java-library-examples.svg)](https://travis-ci.org/biezhi/java-library-examples)
-[![@biezhi on zhihu](https://img.shields.io/badge/zhihu-%40biezhi-red.svg)](https://www.zhihu.com/people/biezhi)
 [![](https://img.shields.io/badge/license-MIT-FF0080.svg)](https://github.com/biezhi/java-library-examples/blob/master/LICENSE)
+[![@biezhi on zhihu](https://img.shields.io/badge/zhihu-%40biezhi-red.svg)](https://www.zhihu.com/people/biezhi)
 [![](https://img.shields.io/github/followers/biezhi.svg?style=social&label=Follow%20Me&maxAge=2592000)](https://github.com/biezhi)
 
 - [`cache-example`](https://github.com/biezhi/java-library-examples/tree/master/cache-example)
@@ -33,9 +33,9 @@ Java 库、框架使用示例大全，持续更新，请勿 `fork`。
     - [`jackson-example`](https://github.com/biezhi/java-library-examples/tree/master/json-example/jackson-example/src/main/java/io/github/biezhi/json/jackson)
 - [`log-example`](https://github.com/biezhi/java-library-examples/blob/master/log-example)
     - [`commons-logging-example`](https://github.com/biezhi/java-library-examples/tree/master/log-example/commons-logging-example/src/main/java/io/github/biezhi/commons/logging)
-    - [`log4j-example`](https://github.com/biezhi/java-library-examples/blob/master/log-example/log4j-example)
-    - [`logback-example`](https://github.com/biezhi/java-library-examples/blob/master/log-example/logback-example)
-    - [`slf4j-example`](https://github.com/biezhi/java-library-examples/blob/master/log-example/slf4j-example)
+    - [`log4j-example`](https://github.com/biezhi/java-library-examples/blob/master/log-example/log4j-example/src/main/java/io/github/biezhi/log4j)
+    - [`logback-example`](https://github.com/biezhi/java-library-examples/blob/master/log-example/logback-example/src/main/java/io/github/biezhi/logback)
+    - [`slf4j-example`](https://github.com/biezhi/java-library-examples/blob/master/log-example/slf4j-example/src/main/java/io/github/biezhi/slf4j)
 - [`mq-example`](https://github.com/biezhi/java-library-examples/blob/master/mq-example)
     - [`kafka-example`](https://github.com/biezhi/java-library-examples/blob/master/mq-example/kafka-example)
     - [`rabbitmq-example`](https://github.com/biezhi/java-library-examples/blob/master/mq-example/rabbitmq-example)
