@@ -13,12 +13,12 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Jackson 示例
+ * Jackson 基础示例
  *
  * @author biezhi
  * @date 2018/1/15
  */
-public class JacksonExample1 {
+public class BasicExample {
 
     private static final ObjectMapper mapper = new ObjectMapper();
 

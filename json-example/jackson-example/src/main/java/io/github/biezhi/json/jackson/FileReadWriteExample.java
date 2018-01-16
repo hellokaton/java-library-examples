@@ -16,7 +16,7 @@ import java.util.List;
  * @author biezhi
  * @date 2018/1/15
  */
-public class JacksonExample2 {
+public class FileReadWriteExample {
 
     private static final ObjectMapper mapper = new ObjectMapper();
 
