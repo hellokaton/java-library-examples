@@ -32,7 +32,7 @@ Java 库、框架使用示例大全，持续更新，请勿 `fork`。
     - [`gson-example`](https://github.com/biezhi/java-library-examples/tree/master/json-example/gson-exmaple/src/main/java/io/github/biezhi/json/gson)
     - [`jackson-example`](https://github.com/biezhi/java-library-examples/tree/master/json-example/jackson-example/src/main/java/io/github/biezhi/json/jackson)
 - [`log-example`](https://github.com/biezhi/java-library-examples/blob/master/log-example)
-    - [`commons-logging-example`](https://github.com/biezhi/java-library-examples/blob/master/log-example/commons-logging-example)
+    - [`commons-logging-example`](https://github.com/biezhi/java-library-examples/tree/master/log-example/commons-logging-example/src/main/java/io/github/biezhi/commons/logging)
     - [`log4j-example`](https://github.com/biezhi/java-library-examples/blob/master/log-example/log4j-example)
     - [`logback-example`](https://github.com/biezhi/java-library-examples/blob/master/log-example/logback-example)
     - [`slf4j-example`](https://github.com/biezhi/java-library-examples/blob/master/log-example/slf4j-example)
