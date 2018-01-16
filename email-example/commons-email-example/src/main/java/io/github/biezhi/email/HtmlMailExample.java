@@ -11,7 +11,7 @@ import java.net.URL;
  * @author biezhi
  * @date 2018/1/15
  */
-public class SendMailExample3 {
+public class HtmlMailExample {
 
     public static void main(String[] args) throws EmailException, MalformedURLException {
         // 创建 Email Message

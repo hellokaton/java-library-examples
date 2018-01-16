@@ -12,7 +12,7 @@ import java.net.URL;
  * @author biezhi
  * @date 2018/1/15
  */
-public class SendMailExample4 {
+public class HtmlEmbeddedImageExample {
 
     public static void main(String[] args) throws EmailException, MalformedURLException {
         // 加载邮件模板

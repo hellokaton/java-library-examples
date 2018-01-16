@@ -8,7 +8,7 @@ import org.apache.commons.mail.*;
  * @author biezhi
  * @date 2018/1/15
  */
-public class SendMailExample2 {
+public class SendWithAttachExample {
 
     public static void main(String[] args) throws EmailException {
         // 创建附件

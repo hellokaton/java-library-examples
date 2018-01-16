@@ -13,7 +13,7 @@ import org.apache.commons.mail.SimpleEmail;
  * @author biezhi
  * @date 2018/1/15
  */
-public class SendMailExample1 {
+public class SendTextExample {
 
     public static void main(String[] args) throws EmailException {
         Email email = new SimpleEmail();
