@@ -11,5 +11,32 @@
 
     <artifactId>ehcache-example</artifactId>
 
+    <properties>
+        <ehcache.version>3.2.0</ehcache.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.ehcache</groupId>
+            <artifactId>ehcache</artifactId>
+            <version>${ehcache.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>1.7.7</version>
+        </dependency>
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.17</version>
+        </dependency>
+        <!-- 集群环境 -->
+        <dependency>
+            <groupId>org.ehcache</groupId>
+            <artifactId>ehcache-clustered</artifactId>
+            <version>${ehcache.version}</version>
+        </dependency>
+    </dependencies>
 
 </project>

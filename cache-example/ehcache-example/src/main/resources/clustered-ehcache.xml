@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache:config
+        xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+        xmlns:terracotta='http://www.ehcache.org/v3/clustered'
+        xmlns:ehcache='http://www.ehcache.org/v3'
+        xsi:schemaLocation="http://www.ehcache.org/v3 http://www.ehcache.org/schema/ehcache-core-3.1.xsd
+    http://www.ehcache.org/v3/clustered http://www.ehcache.org/schema/ehcache-clustered-ext-3.1.xsd">
+
+    <ehcache:service>
+        <terracotta:cluster>
+            <terracotta:connection url="terracotta://localhost:9510/clustered"/>
+            <terracotta:server-side-config auto-create="true">
+                <terracotta:default-resource from="default-resource"/>
+            </terracotta:server-side-config>
+        </terracotta:cluster>
+    </ehcache:service>
+
+    <ehcache:cache alias="basicCache">
+        <ehcache:key-type>java.lang.Long</ehcache:key-type>
+        <ehcache:value-type>java.lang.String</ehcache:value-type>
+        <ehcache:resources>
+            <ehcache:heap unit="entries">100</ehcache:heap>
+            <ehcache:offheap unit="MB">1</ehcache:offheap>
+            <terracotta:clustered-dedicated unit="MB">5</terracotta:clustered-dedicated>
+        </ehcache:resources>
+    </ehcache:cache>
+</ehcache:config>
