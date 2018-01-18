@@ -10,7 +10,7 @@ public class HelloJobListener implements JobListener {
 
 	@Override
 	public String getName() {
-		return LISTENER_NAME; //must return a name
+		return LISTENER_NAME;
 	}
 
 	/**
@@ -19,7 +19,6 @@ public class HelloJobListener implements JobListener {
 	 */
 	@Override
 	public void jobToBeExecuted(JobExecutionContext context) {
-
 		String jobName = context.getJobDetail().getKey().toString();
 		System.out.println("任务要开始啦");
 		System.out.println("任务 : " + jobName + " 开始...");
