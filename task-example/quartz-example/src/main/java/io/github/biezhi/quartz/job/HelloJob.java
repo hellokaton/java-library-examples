@@ -1,12 +1,10 @@
 package io.github.biezhi.quartz.job;
 
 import java.time.LocalDateTime;
-import java.util.Date;
 
 import org.quartz.Job;
 import org.quartz.JobDetail;
 import org.quartz.JobExecutionContext;
-import org.quartz.JobExecutionException;
 import org.quartz.JobKey;
 
 public class HelloJob implements Job {

@@ -1,13 +1,14 @@
 package io.github.biezhi.qrgen;
 
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+
 import com.google.zxing.EncodeHintType;
 import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
+
 import net.glxn.qrgen.core.image.ImageType;
 import net.glxn.qrgen.core.vcard.VCard;
 import net.glxn.qrgen.javase.QRCode;
-
-import java.io.ByteArrayOutputStream;
-import java.io.File;
 
 /**
  * QRGen QR Code Generator Usages
@@ -19,7 +20,7 @@ public class QRGenExample {
 
     public static void main(String[] args) {
         // get QR file from text using defaults
-        File file = QRCode.from("Hello World").file();
+        // File file = QRCode.from("Hello World").file();
 
         // get QR stream from text using defaults
         ByteArrayOutputStream stream = QRCode.from("Hello World").stream();

@@ -1,13 +1,13 @@
 package io.github.biezhi.json.gson;
 
+import java.lang.reflect.Type;
+
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
+
 import io.github.biezhi.json.gson.model.Animal;
 import io.github.biezhi.json.gson.model.Dog;
-import io.github.biezhi.json.gson.model.Health;
-
-import java.lang.reflect.Type;
 
 /**
  * 序列化、发序列化泛型类型

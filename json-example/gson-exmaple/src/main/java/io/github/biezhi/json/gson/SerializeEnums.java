@@ -2,12 +2,8 @@ package io.github.biezhi.json.gson;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.google.gson.reflect.TypeToken;
-import io.github.biezhi.json.gson.model.Health;
 
-import java.lang.reflect.Type;
-import java.util.Arrays;
-import java.util.Collection;
+import io.github.biezhi.json.gson.model.Health;
 
 /**
  * 序列化、发序列化枚举
