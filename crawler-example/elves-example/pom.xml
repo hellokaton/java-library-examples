@@ -11,5 +11,11 @@
 
     <artifactId>elves-example</artifactId>
 
-
+    <dependencies>
+        <dependency>
+            <groupId>io.github.biezhi</groupId>
+            <artifactId>elves</artifactId>
+            <version>0.0.2</version>
+        </dependency>
+    </dependencies>
 </project>
