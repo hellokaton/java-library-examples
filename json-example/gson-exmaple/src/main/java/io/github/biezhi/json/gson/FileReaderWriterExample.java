@@ -17,7 +17,7 @@ import java.util.List;
  * @author biezhi
  * @date 2018/1/15
  */
-public class GsonExample2 {
+public class FileReaderWriterExample {
 
     private static final Gson gson = new Gson();
 

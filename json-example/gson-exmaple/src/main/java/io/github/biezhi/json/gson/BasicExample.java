@@ -16,7 +16,7 @@ import java.util.Map;
  * @author biezhi
  * @date 2018/1/15
  */
-public class GsonExample1 {
+public class BasicExample {
 
     private static final Gson gson = new Gson();
 
