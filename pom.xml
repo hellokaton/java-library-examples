@@ -30,6 +30,7 @@
         <module>common-beans</module>
         <module>embedded-example</module>
         <module>compress-example</module>
+        <module>tensorflow-example</module>
     </modules>
 
     <properties>
