@@ -37,6 +37,7 @@ Java 库、框架使用示例大全，持续更新，请勿 `fork`。
     - [`log4j-example`](https://github.com/biezhi/java-library-examples/blob/master/log-example/log4j-example/src/main/java/io/github/biezhi/log4j)
     - [`logback-example`](https://github.com/biezhi/java-library-examples/blob/master/log-example/logback-example/src/main/java/io/github/biezhi/logback)
     - [`slf4j-example`](https://github.com/biezhi/java-library-examples/blob/master/log-example/slf4j-example/src/main/java/io/github/biezhi/slf4j)
+- [`metrics-example`](https://github.com/biezhi/java-library-examples/blob/master/metrics-example)
 - [`mq-example`](https://github.com/biezhi/java-library-examples/blob/master/mq-example)
     - [`kafka-example`](https://github.com/biezhi/java-library-examples/blob/master/mq-example/kafka-example)
     - [`rabbitmq-example`](https://github.com/biezhi/java-library-examples/blob/master/mq-example/rabbitmq-example)
