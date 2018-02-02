@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Running Examples from Live War</title>
+  <script type="text/javascript" src="js/jquery-2.1.4.js"></script>
+  <script type="text/javascript" src="js/jquery.timer.js"></script>
+  <script type="text/javascript" src="js/time.js"></script>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="icon" type="image/png" href="images/jetty-avatar.png" />
+</head>
+<body>
+  <img class="avatar" src="images/jetty-avatar.png" />
+  <h1>Running Examples from Embedded Jetty Cookbook <code>/static-root/</code></h1>
+  <p>
+    The following time stamps are being updated in 3 different ways.
+  </p>
+  <h4>Updated from JavaScript <code>Date.toLocaleTimeString()</code></h4>
+  <div class="time">
+    <span id="timeJsDate"></span>
+  </div>
+  <h4>Updated from <code>/time/</code> Servlet</h4>
+  <div class="time">
+    <span id="timeServlet"></span>
+  </div>
+  <h4>Updated from <code>time</code> WebSocket</h4>
+  <div class="time">
+    <span id="timeWebSocket"></span>
+  </div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+body {
+  font-family: sans-serif;
+}
+
+.avatar {
+  float: left;	
+}
+
+.time {
+  height: 50px;
+  width: 400px;
+  background-color: red;
+  border-radius: 25px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 25px;
+  line-height: 50px;
+  animation: 
+    pulse 3s ease infinite alternate;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    background-color: red;
+  }
+  50% {
+    background-color: orange;
+  }
+}
+
+
