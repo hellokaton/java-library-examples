@@ -34,7 +34,6 @@ public class LocalDataCollectorCrawler extends WebCrawler {
     @Override
     public void visit(Page page) {
         logger.info("Visited: {}", page.getWebURL().getURL());
-        myCrawlStat.incProcessedPages();
 
         if (page.getParseData() instanceof HtmlParseData) {
             HtmlParseData parseData = (HtmlParseData) page.getParseData();
