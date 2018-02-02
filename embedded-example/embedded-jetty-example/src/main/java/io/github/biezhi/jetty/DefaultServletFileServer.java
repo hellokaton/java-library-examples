@@ -10,11 +10,9 @@ import org.eclipse.jetty.util.resource.Resource;
 import java.net.URI;
 import java.net.URL;
 
-public class DefaultServletFileServer
-{
-    public static void main(String[] args) throws Exception
-    {
-        Server server = new Server();
+public class DefaultServletFileServer {
+    public static void main(String[] args) throws Exception {
+        Server          server    = new Server();
         ServerConnector connector = new ServerConnector(server);
         connector.setPort(8080);
         server.addConnector(connector);
@@ -24,8 +22,7 @@ public class DefaultServletFileServer
         // We look for a file, as ClassLoader.getResource() is not
         // designed to look for directories (we resolve the directory later)
         URL f = cl.getResource("static-root/hello.html");
-        if (f == null)
-        {
+        if (f == null) {
             throw new RuntimeException("Unable to find resource directory");
         }
 
@@ -38,9 +35,9 @@ public class DefaultServletFileServer
         context.setBaseResource(Resource.newResource(webRootUri));
         server.setHandler(context);
 
-        ServletHolder holderPwd = new ServletHolder("default",DefaultServlet.class);
-        holderPwd.setInitParameter("dirAllowed","true");
-        context.addServlet(holderPwd,"/");
+        ServletHolder holderPwd = new ServletHolder("default", DefaultServlet.class);
+        holderPwd.setInitParameter("dirAllowed", "true");
+        context.addServlet(holderPwd, "/");
 
         server.start();
         server.join();

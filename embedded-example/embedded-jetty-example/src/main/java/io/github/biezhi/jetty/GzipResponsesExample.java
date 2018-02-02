@@ -14,19 +14,17 @@ import javax.websocket.server.ServerContainer;
 import java.io.File;
 import java.nio.file.Path;
 
-public class GzipResponsesExample
-{
-    public static void main(String[] args) throws Exception
-    {
-        Server server = new Server();
+public class GzipResponsesExample {
+    public static void main(String[] args) throws Exception {
+        Server          server    = new Server();
         ServerConnector connector = new ServerConnector(server);
         connector.setPort(8080);
         server.addConnector(connector);
 
         GzipHandler gzip = new GzipHandler();
-        gzip.setIncludedMethods("GET","POST");
+        gzip.setIncludedMethods("GET", "POST");
         gzip.setMinGzipSize(245);
-        gzip.setIncludedMimeTypes("text/plain","text/css","text/html",
+        gzip.setIncludedMimeTypes("text/plain", "text/css", "text/html",
                 "application/javascript");
         server.setHandler(gzip);
 
@@ -36,15 +34,15 @@ public class GzipResponsesExample
         gzip.setHandler(context);
         context.setContextPath("/");
         context.setBaseResource(new PathResource(webRootPath));
-        context.setWelcomeFiles(new String[] { "index.html" });
-        
+        context.setWelcomeFiles(new String[]{"index.html"});
+
         // Adding WebSockets
         ServerContainer wsContainer = WebSocketServerContainerInitializer.configureContext(context);
         wsContainer.addEndpoint(TimeSocket.class);
 
         // Adding Servlets
-        context.addServlet(TimeServlet.class,"/time/");
-        context.addServlet(DefaultServlet.class,"/"); // always last, always on "/"
+        context.addServlet(TimeServlet.class, "/time/");
+        context.addServlet(DefaultServlet.class, "/"); // always last, always on "/"
 
         server.start();
         server.join();

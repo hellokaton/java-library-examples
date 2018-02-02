@@ -30,41 +30,33 @@ import java.util.TimeZone;
 import java.util.concurrent.TimeUnit;
 
 @WebSocket
-public class JettyTimeSocket implements Runnable
-{
+public class JettyTimeSocket implements Runnable {
     private TimeZone timezone;
-    private Session session;
+    private Session  session;
 
     @OnWebSocketConnect
-    public void onOpen(Session session)
-    {
+    public void onOpen(Session session) {
         this.session = session;
         this.timezone = TimeZone.getTimeZone("UTC");
         new Thread(this).start();
     }
 
     @OnWebSocketClose
-    public void onClose(int closeCode, String closeReasonPhrase)
-    {
+    public void onClose(int closeCode, String closeReasonPhrase) {
         this.session = null;
     }
 
     @Override
-    public void run()
-    {
-        while (this.session != null)
-        {
-            try
-            {
+    public void run() {
+        while (this.session != null) {
+            try {
                 SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssZ");
                 dateFormat.setTimeZone(timezone);
 
                 String timestamp = dateFormat.format(new Date());
                 this.session.getRemote().sendString(timestamp);
                 TimeUnit.SECONDS.sleep(1);
-            }
-            catch (InterruptedException | IOException e)
-            {
+            } catch (InterruptedException | IOException e) {
                 e.printStackTrace();
             }
         }

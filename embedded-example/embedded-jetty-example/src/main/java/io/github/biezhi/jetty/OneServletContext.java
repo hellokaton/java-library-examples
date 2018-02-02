@@ -1,5 +1,6 @@
 package io.github.biezhi.jetty;
 
+import io.github.biezhi.jetty.servlets.DumpServlet;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.servlet.DefaultServlet;
 import org.eclipse.jetty.servlet.ServletContextHandler;

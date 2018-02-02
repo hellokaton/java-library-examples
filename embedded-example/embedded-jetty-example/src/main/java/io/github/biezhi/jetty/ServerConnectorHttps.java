@@ -6,19 +6,16 @@ import org.eclipse.jetty.util.ssl.SslContextFactory;
 
 import java.net.URL;
 
-public class ServerConnectorHttps
-{
-    public static void main(String[] args) throws Exception
-    {
-        Server server = new Server();
-        int httpsPort = 8443;
-        
+public class ServerConnectorHttps {
+    public static void main(String[] args) throws Exception {
+        Server server    = new Server();
+        int    httpsPort = 8443;
+
         // Find Keystore
-        ClassLoader cl = ServerConnectorHttps.class.getClassLoader();
-        String keystoreResource = "ssl/keystore";
-        URL f = cl.getResource(keystoreResource);
-        if (f == null)
-        {
+        ClassLoader cl               = ServerConnectorHttps.class.getClassLoader();
+        String      keystoreResource = "ssl/keystore";
+        URL         f                = cl.getResource(keystoreResource);
+        if (f == null) {
             throw new RuntimeException("Unable to find " + keystoreResource);
         }
 
@@ -27,7 +24,7 @@ public class ServerConnectorHttps
         sslContextFactory.setKeyStorePath(f.toExternalForm());
         sslContextFactory.setKeyStorePassword("OBF:1vny1zlo1x8e1vnw1vn61x8g1zlu1vn4");
         sslContextFactory.setKeyManagerPassword("OBF:1u2u1wml1z7s1z7a1wnl1u2g");
-        
+
         // Setup HTTPS Configuration
         HttpConfiguration httpsConf = new HttpConfiguration();
         httpsConf.setSecurePort(httpsPort);
@@ -36,10 +33,10 @@ public class ServerConnectorHttps
 
         // Establish the ServerConnector
         ServerConnector httpsConnector = new ServerConnector(server,
-                new SslConnectionFactory(sslContextFactory,"http/1.1"),
+                new SslConnectionFactory(sslContextFactory, "http/1.1"),
                 new HttpConnectionFactory(httpsConf));
         httpsConnector.setPort(httpsPort);
-        
+
         server.addConnector(httpsConnector);
 
         // Add a Handler for requests

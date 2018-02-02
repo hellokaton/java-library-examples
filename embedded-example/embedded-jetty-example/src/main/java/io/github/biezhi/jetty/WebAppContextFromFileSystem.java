@@ -6,10 +6,8 @@ import org.eclipse.jetty.webapp.WebAppContext;
 import java.io.File;
 import java.nio.file.Path;
 
-public class WebAppContextFromFileSystem
-{
-    public static void main(String[] args) throws Exception
-    {
+public class WebAppContextFromFileSystem {
+    public static void main(String[] args) throws Exception {
         Server server = new Server(8080);
 
         Path warPath = new File("webapps/hello.war").toPath().toRealPath();

@@ -30,41 +30,33 @@ import java.util.TimeZone;
 import java.util.concurrent.TimeUnit;
 
 @ServerEndpoint("/time/")
-public class TimeSocket implements Runnable
-{
+public class TimeSocket implements Runnable {
     private TimeZone timezone;
-    private Session session;
+    private Session  session;
 
     @OnOpen
-    public void onOpen(Session session)
-    {
+    public void onOpen(Session session) {
         this.session = session;
         this.timezone = TimeZone.getTimeZone("UTC");
         new Thread(this).start();
     }
 
     @OnClose
-    public void onClose(CloseReason close)
-    {
+    public void onClose(CloseReason close) {
         this.session = null;
     }
 
     @Override
-    public void run()
-    {
-        while (this.session != null)
-        {
-            try
-            {
+    public void run() {
+        while (this.session != null) {
+            try {
                 SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssZ");
                 dateFormat.setTimeZone(timezone);
 
                 String timestamp = dateFormat.format(new Date());
                 this.session.getBasicRemote().sendText(timestamp);
                 TimeUnit.SECONDS.sleep(1);
-            }
-            catch (InterruptedException | IOException e)
-            {
+            } catch (InterruptedException | IOException e) {
                 e.printStackTrace();
             }
         }

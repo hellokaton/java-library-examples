@@ -12,22 +12,19 @@ import java.net.URI;
 import java.net.URL;
 import java.nio.file.Path;
 
-public class DefaultServletMultipleBases
-{
-    public static void main(String[] args) throws Exception
-    {
-        Server server = new Server();
+public class DefaultServletMultipleBases {
+    public static void main(String[] args) throws Exception {
+        Server          server    = new Server();
         ServerConnector connector = new ServerConnector(server);
         connector.setPort(8080);
         server.addConnector(connector);
-        
+
         // Figure out what path to serve content from
         ClassLoader cl = DefaultServletMultipleBases.class.getClassLoader();
         // We look for a file, as ClassLoader.getResource() is not
         // designed to look for directories (we resolve the directory later)
         URL f = cl.getResource("static-root/hello.html");
-        if (f == null)
-        {
+        if (f == null) {
             throw new RuntimeException("Unable to find resource directory");
         }
 
@@ -42,24 +39,24 @@ public class DefaultServletMultipleBases
         context.setBaseResource(Resource.newResource(webRootUri));
         context.setWelcomeFiles(new String[]{"index.html", "index.htm", "alt-index.html"});
         server.setHandler(context);
-        
+
         // Find altPath
         Path altPath = new File("webapps/alt-root").toPath().toRealPath();
         System.err.println("Alt Base Resource is " + altPath);
 
         // add special pathspec of "/alt/" content mapped to the altPath
         ServletHolder holderAlt = new ServletHolder("static-alt", DefaultServlet.class);
-        holderAlt.setInitParameter("resourceBase",altPath.toUri().toASCIIString());
-        holderAlt.setInitParameter("dirAllowed","true");
-        holderAlt.setInitParameter("pathInfoOnly","true");
-        context.addServlet(holderAlt,"/alt/*");
+        holderAlt.setInitParameter("resourceBase", altPath.toUri().toASCIIString());
+        holderAlt.setInitParameter("dirAllowed", "true");
+        holderAlt.setInitParameter("pathInfoOnly", "true");
+        context.addServlet(holderAlt, "/alt/*");
 
         // Lastly, the default servlet for root content (always needed, to satisfy servlet spec)
         // It is important that this is last.
         ServletHolder holderDef = new ServletHolder("default", DefaultServlet.class);
-        holderDef.setInitParameter("dirAllowed","true");
-        context.addServlet(holderDef,"/");
-        
+        holderDef.setInitParameter("dirAllowed", "true");
+        context.addServlet(holderDef, "/");
+
         server.start();
         server.join();
     }

@@ -5,26 +5,24 @@ import org.eclipse.jetty.server.ServerConnector;
 import org.eclipse.jetty.server.handler.HandlerCollection;
 import org.eclipse.jetty.webapp.WebAppContext;
 
-public class ConnectorSpecificWebapps
-{
-    public static void main(String[] args) throws Exception
-    {
+public class ConnectorSpecificWebapps {
+    public static void main(String[] args) throws Exception {
         Server server = new Server();
-        
+
         ServerConnector connectorA = new ServerConnector(server);
         connectorA.setPort(8080);
         connectorA.setName("connA");
         ServerConnector connectorB = new ServerConnector(server);
         connectorB.setPort(9090);
         connectorB.setName("connB");
-        
+
         server.addConnector(connectorA);
         server.addConnector(connectorB);
-        
+
         // Basic handler collection
         HandlerCollection contexts = new HandlerCollection();
         server.setHandler(contexts);
-        
+
         // WebApp A
         WebAppContext appA = new WebAppContext();
         appA.setContextPath("/a");

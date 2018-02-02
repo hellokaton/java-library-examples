@@ -6,10 +6,8 @@ import org.eclipse.jetty.server.ServerConnector;
 import org.eclipse.jetty.server.handler.ContextHandler;
 import org.eclipse.jetty.server.handler.ContextHandlerCollection;
 
-public class ConnectorSpecificContexts
-{
-    public static void main(String[] args) throws Exception
-    {
+public class ConnectorSpecificContexts {
+    public static void main(String[] args) throws Exception {
         Server server = new Server();
 
         ServerConnector connectorA = new ServerConnector(server);
@@ -30,14 +28,14 @@ public class ConnectorSpecificContexts
         ContextHandler ctxHelloA = new ContextHandler();
         ctxHelloA.setContextPath("/");
         ctxHelloA.setHandler(new io.github.biezhi.jetty.handlers.HelloHandler("Hello Connection A"));
-        ctxHelloA.setVirtualHosts(new String[] { "@connA" });
+        ctxHelloA.setVirtualHosts(new String[]{"@connA"});
         contexts.addHandler(ctxHelloA);
 
         // Hello Handler (connection B)
         ContextHandler ctxHelloB = new ContextHandler();
         ctxHelloB.setContextPath("/");
         ctxHelloB.setHandler(new HelloHandler("Greetings from Connection B"));
-        ctxHelloB.setVirtualHosts(new String[] { "@connB" });
+        ctxHelloB.setVirtualHosts(new String[]{"@connB"});
         contexts.addHandler(ctxHelloB);
 
         server.start();

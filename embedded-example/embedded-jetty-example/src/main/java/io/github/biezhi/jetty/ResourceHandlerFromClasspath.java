@@ -7,10 +7,8 @@ import org.eclipse.jetty.util.resource.Resource;
 import java.net.URI;
 import java.net.URL;
 
-public class ResourceHandlerFromClasspath
-{
-    public static void main(String[] args) throws Exception
-    {
+public class ResourceHandlerFromClasspath {
+    public static void main(String[] args) throws Exception {
         Server server = new Server(8080);
 
         // Figure out what path to serve content from
@@ -18,8 +16,7 @@ public class ResourceHandlerFromClasspath
         // We look for a file, as ClassLoader.getResource() is not
         // designed to look for directories (we resolve the directory later)
         URL f = cl.getResource("static-root/hello.html");
-        if (f == null)
-        {
+        if (f == null) {
             throw new RuntimeException("Unable to find resource directory");
         }
 
