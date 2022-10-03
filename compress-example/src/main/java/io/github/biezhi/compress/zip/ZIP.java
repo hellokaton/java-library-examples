@@ -34,6 +34,9 @@ public class ZIP {
                     continue;
                 }
                 File curfile = new File(destination, entry.getName());
+                if (!curfile.toPath().normalize().startsWith(destination.toPath().normalize())) {
+                    throw new IOException("Bad zip entry");
+                }
                 File parent  = curfile.getParentFile();
                 if (!parent.exists()) {
                     if (!parent.mkdirs()) {
